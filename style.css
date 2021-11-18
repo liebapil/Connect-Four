@@ -1,0 +1,31 @@
+.html2{
+    background-color: gray;
+}
+
+.container{
+    height:  500px;
+    width: 600px;
+    background-color: blue; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;   
+}
+
+.column1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 10px;   
+}
+
+.circle{
+    height: 60px;
+    width: 60px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50px;   
+}
+
+.red{
+    background-color: red;
+}
