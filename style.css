@@ -8,7 +8,8 @@
     background-color: blue; 
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;   
+    justify-content: space-evenly; 
+    border-radius: 5px;  
 }
 
 .column1{
@@ -28,4 +29,8 @@
 
 .red{
     background-color: red;
+}
+
+.black{
+    background-color: black;
 }
