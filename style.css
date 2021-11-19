@@ -1,18 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+.html1{
+    background-color: #C0C0C0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: 100px;
+    margin-left: 50px;
+    margin-right: 20px;
+}
+
+
+.alignment{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    margin-top: 20px;
+    
+}
+
+.start_game {
+    margin-top: 50px;
+    margin-left: 200px;
+    font-size: 40px;
+    font-style: italic;
+    color: #1E90FF;
+   
+}
+img{
+    border-radius: 20px;
+    
+}
+.first_header{
+    font-family: 'Press Start 2P', cursive;
+    margin-bottom: 20px;
+}
+.head_ins{
+    font-family: 'Bubblegum Sans', cursive;   
+}
+p{
+    font-family: 'Lobster', cursive;
+}
+
+
+
+
+
 .html2{
     background-color: gray;
 }
 
 .container{
     height:  500px;
-    width: 600px;
-    background-color: blue; 
+    width: 700px;
+    background-color: #1E90FF; 
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly; 
+    flex-direction: row;
+    justify-content:space-evenly; 
     border-radius: 5px;  
 }
 
 .column1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 10px;   
+}
+.column2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 10px;   
+}
+.column3{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 10px;   
+}
+.column4{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 10px;   
+}
+.column5{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 10px;   
+}
+.column6{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 10px;   
+}
+.column7{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -31,6 +117,6 @@
     background-color: red;
 }
 
-.black{
-    background-color: black;
+.yellow{
+    background-color: yellow;
 }

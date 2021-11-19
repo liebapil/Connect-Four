@@ -6,15 +6,37 @@ let currentPlayer= 'red'
     
 // })
 
+// for (let i = 0; i < column.length; i++){
+    
+//     column[i].addEventListener('click',()=>{
+//         if(column[i].classList.contains('taken')){
+//             if (currentPlayer === 'red'){
+//                 column[i].classList.contains('taken')
+//                 column[i].classList.add('red')
+//                 currentPlayer='yellow'
+//             }else {
+//                 column[i].classList.contains('taken')
+//                 column[i].classList.add('yellow')
+//                 currentPlayer = 'red'   
+//                         }
+
+//         }
+//     })
+// }
+
+
+
+
 for (let i = 0; i < column.length; i++){
     
-    column[i].addEventListener('click',()=>{
+    column[i].addEventListener('click',(e)=>{
+        console.log(e.currentTarget)
         if (currentPlayer === 'red'){
         column[i].classList.add('red')
-        currentPlayer='black'
+        currentPlayer='yellow'
         }else {
-            column[i].classList.add('black')
+            column[i].classList.add('yellow')
             currentPlayer = 'red'   
         }})
-
 }
+//https://img.itch.zone/aW1hZ2UvMTA5NjM5Lzc3MTc5NC5naWY=/original/XfcdXj.gif
