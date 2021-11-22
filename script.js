@@ -1,33 +1,11 @@
 const game = () => {
 ///////////////////
 
-
-const column = document.querySelectorAll('.circle')
+const column = document.querySelectorAll('.container')
+const circle = document.querySelectorAll('.circle')
 let currentPlayer= 'red'
 let isGameOver= false
-// column.addEventListener('click',()=>{
-//     column.children[5].classList.add('red')
-//     column.children[4].classList.add('black')
-    
-// })
 
-// for (let i = 0; i < column.length; i++){
-    
-//     column[i].addEventListener('click',()=>{
-//         if(column[i].classList.contains('taken')){
-//             if (currentPlayer === 'red'){
-//                 column[i].classList.contains('taken')
-//                 column[i].classList.add('red')
-//                 currentPlayer='yellow'
-//             }else {
-//                 column[i].classList.contains('taken')
-//                 column[i].classList.add('yellow')
-//                 currentPlayer = 'red'   
-//                         }
-
-//         }
-//     })
-// }
 
 //found here: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#creating_a_two-dimensional_array
 const howToWin = [
@@ -98,7 +76,8 @@ const howToWin = [
 [14, 21, 28, 35],
 [6, 13, 20, 27],
 [13, 20, 27, 34],
-[20, 27, 34, 41]
+[20, 27, 34, 41],
+
 ]
 
 
@@ -197,20 +176,160 @@ const howToWin = [
 
 
 
-for (let i = 0; i < column.length; i++){
+for (let i = 0; i < circle.length; i++){
     
-    column[i].addEventListener('click',(e)=>{
-        //console.log(e.currentTarget)
-    
-        if (currentPlayer === 'red'){
-        column[i].classList.add('red')
-        //howToWin()
-        currentPlayer='yellow'
-        }else {
-            column[i].classList.add('yellow')
-            //howToWin()
-            currentPlayer = 'red'   
-        }})
+    circle[i].addEventListener('click',(e)=>{
+        console.log(e.currentTarget)
+        if (i<=5){
+            for(let j =5; j>=0; j--){
+                if (circle[j].classList.contains('red') || circle[j].classList.contains('yellow')){
+                    console.log(circle[j])
+                    
+                }
+                else {
+                    circle[j].classList.add(currentPlayer)
+                    console.log(circle[j])
+                    j=-1
+                    if(currentPlayer=='yellow'){
+                        currentPlayer='red'
+                    }else{
+                        currentPlayer='yellow'
+                    }
+                    return
+                }
+            }
+        }else if (i<=11){
+            for(let j = 11; j>=0; j--){
+                if (circle[j].classList.contains('red') || circle[j].classList.contains('yellow')){
+                    console.log(circle[j])
+                    
+                }
+                else {
+                    circle[j].classList.add(currentPlayer)
+                    console.log(circle[j])
+                    j=-1
+                    if(currentPlayer=='yellow'){
+                        currentPlayer='red'
+                    }else{
+                        currentPlayer='yellow'
+                    }
+                    return
+                }
+            }
+        }
+        else if (i<=17){
+            for(let j = 17; j>=0; j--){
+                if (circle[j].classList.contains('red') || circle[j].classList.contains('yellow')){
+                    console.log(circle[j])
+                    
+                }
+                else {
+                    circle[j].classList.add(currentPlayer)
+                    console.log(circle[j])
+                    j=-1
+                    if(currentPlayer=='yellow'){
+                        currentPlayer='red'
+                    }else{
+                        currentPlayer='yellow'
+                    }
+                    return
+                }
+            }
+        }
+        else if (i<=23){
+            for(let j = 23; j>=0; j--){
+                if (circle[j].classList.contains('red') || circle[j].classList.contains('yellow')){
+                    console.log(circle[j])
+                    
+                }
+                else {
+                    circle[j].classList.add(currentPlayer)
+                    console.log(circle[j])
+                    j=-1
+                    if(currentPlayer=='yellow'){
+                        currentPlayer='red'
+                    }else{
+                        currentPlayer='yellow'
+                    }
+                    return
+                }
+            }
+        }
+        else if (i<=29){
+            for(let j = 29; j>=0; j--){
+                if (circle[j].classList.contains('red') || circle[j].classList.contains('yellow')){
+                    console.log(circle[j])
+                    
+                }
+                else {
+                    circle[j].classList.add(currentPlayer)
+                    console.log(circle[j])
+                    j=-1
+                    if(currentPlayer=='yellow'){
+                        currentPlayer='red'
+                    }else{
+                        currentPlayer='yellow'
+                    }
+                    return
+                }
+            }
+        }
+        else if (i<=35){
+            for(let j = 35; j>=0; j--){
+                if (circle[j].classList.contains('red') || circle[j].classList.contains('yellow')){
+                    console.log(circle[j])
+                    
+                }
+                else {
+                    circle[j].classList.add(currentPlayer)
+                    console.log(circle[j])
+                    j=-1
+                    if(currentPlayer=='yellow'){
+                        currentPlayer='red'
+                    }else{
+                        currentPlayer='yellow'
+                    }
+                    return
+                }
+            }
+        }
+        else if (i<=41){
+            for(let j = 41; j>=0; j--){
+                if (circle[j].classList.contains('red') || circle[j].classList.contains('yellow')){
+                    console.log(circle[j])
+                    
+                }
+                else {
+                    circle[j].classList.add(currentPlayer)
+                    console.log(circle[j])
+                    j=-1
+                    if(currentPlayer=='yellow'){
+                        currentPlayer='red'
+                    }else{
+                        currentPlayer='yellow'
+                    }
+                    return
+                }
+            }
+        }
+        else {
+            return "You picked the wrong sqaure"
+        }
+
+
+
+
+
+    })
+    //     if (currentPlayer === 'red'){
+    //     circle[i].classList.add('red')
+    //     //howToWin()
+    //     currentPlayer='yellow'
+    //     }else {
+    //         circle[i].classList.add('yellow')
+    //         //howToWin()
+    //         currentPlayer = 'red'   
+    // }})
 }
 /////////////
 }
