@@ -102,11 +102,38 @@ const winningArray = [
 [17, 23, 29, 35],
 [23, 29, 35, 41]
 ]
+const howToWin=() =>{
+    for (let i = 0; i < winningArray.length; i++){
+        let combo = winningArray[i]
+        if(
+            circle[combo[0]].classList.contains(currentPlayer) &&
+            circle[combo[1]].classList.contains(currentPlayer) &&
+            circle[combo[2]].classList.contains(currentPlayer) &&
+            circle[combo[3]].classList.contains(currentPlayer) 
+        ){
+            isGameOver=true
+            //return alert('you won')
+            let modal = document.createElement('div')
+            modal.className='modal'
+            modal.textContent= 'You Won!'
+            modal.addEventListener('click',() =>{
+                modal.remove()
+            }
+            )
+            document.body.appendChild(modal)
+            return
+        }
+    }
+}
+
 
 
 
 for (let i = 0; i < circle.length; i++){
     circle[i].addEventListener('click',(e)=>{
+        if(isGameOver){
+            return
+        }
         console.log(e.currentTarget)
         if (i<=5){
             for(let j =5; j>=0; j--){
@@ -117,7 +144,7 @@ for (let i = 0; i < circle.length; i++){
                 else {
                     circle[j].classList.add(currentPlayer)
                     console.log(circle[j])
-                    j=-1
+                    howToWin()
                     if(currentPlayer=='yellow'){
                         currentPlayer='red'
                     }else{
@@ -135,7 +162,7 @@ for (let i = 0; i < circle.length; i++){
                 else {
                     circle[j].classList.add(currentPlayer)
                     console.log(circle[j])
-                    j=-1
+                    howToWin()
                     if(currentPlayer=='yellow'){
                         currentPlayer='red'
                     }else{
@@ -154,7 +181,7 @@ for (let i = 0; i < circle.length; i++){
                 else {
                     circle[j].classList.add(currentPlayer)
                     console.log(circle[j])
-                    j=-1
+                    howToWin()
                     if(currentPlayer=='yellow'){
                         currentPlayer='red'
                     }else{
@@ -173,7 +200,7 @@ for (let i = 0; i < circle.length; i++){
                 else {
                     circle[j].classList.add(currentPlayer)
                     console.log(circle[j])
-                    j=-1
+                    howToWin()
                     if(currentPlayer=='yellow'){
                         currentPlayer='red'
                     }else{
@@ -192,7 +219,7 @@ for (let i = 0; i < circle.length; i++){
                 else {
                     circle[j].classList.add(currentPlayer)
                     console.log(circle[j])
-                    j=-1
+                    howToWin()
                     if(currentPlayer=='yellow'){
                         currentPlayer='red'
                     }else{
@@ -211,7 +238,7 @@ for (let i = 0; i < circle.length; i++){
                 else {
                     circle[j].classList.add(currentPlayer)
                     console.log(circle[j])
-                    j=-1
+                    howToWin()
                     if(currentPlayer=='yellow'){
                         currentPlayer='red'
                     }else{
@@ -230,7 +257,7 @@ for (let i = 0; i < circle.length; i++){
                 else {
                     circle[j].classList.add(currentPlayer)
                     console.log(circle[j])
-                    j=-1
+                    howToWin()
                     if(currentPlayer=='yellow'){
                         currentPlayer='red'
                     }else{
@@ -247,13 +274,13 @@ for (let i = 0; i < circle.length; i++){
     )
 }
 /////////////
-}
-game()
 let restartGame = document.querySelector('.reset').addEventListener('click', ()=>{
     isGameOver= false
-    const circle = document.querySelectorAll('.cirlce');
+    
     for(let i=0; i< circle.length;i++){
-        circle[i].classList.add('')
+        circle[i].className='circle'
     }
-    game()
+    
 })
+}
+game()
