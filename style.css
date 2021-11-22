@@ -22,8 +22,8 @@
 }
 
 .start_game {
-    margin-top: 50px;
-    margin-left: 200px;
+    margin-top: 70px;
+    margin-left: 250px;
     font-size: 40px;
     font-style: italic;
     color: #1E90FF;
@@ -43,7 +43,9 @@ img{
 p{
     font-family: 'Lobster', cursive;
 }
-
+h6{
+    margin-top: 120px;
+}
 
 
 
@@ -112,6 +114,14 @@ p{
     background-color: white;
     margin: 10px;
     border-radius: 50px;   
+}
+button{
+margin-left: 900px;
+    
+}
+h4{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
 }
 
 .red{
