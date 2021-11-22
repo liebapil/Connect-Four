@@ -8,7 +8,7 @@ let isGameOver= false
 
 
 //found here: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#creating_a_two-dimensional_array
-const howToWin = [
+const winningArray = [
 [0, 1, 2, 3],
 [1, 2, 3, 4],
 [2, 3, 4, 5],
@@ -77,7 +77,30 @@ const howToWin = [
 [6, 13, 20, 27],
 [13, 20, 27, 34],
 [20, 27, 34, 41],
-
+[0, 6, 12, 18],
+[6, 12, 18, 24],
+[12, 18, 24, 30],
+[18, 24, 30, 36],
+[1, 7, 13, 19],
+[7, 13, 19, 25],
+[13, 19, 25, 31],
+[19, 25, 31, 37],
+[2, 8, 14, 20],
+[8, 14, 20, 26],
+[14, 20, 26, 32],
+[20, 26, 32, 38],
+[3, 9, 15, 21],
+[9, 15, 21, 27],
+[15, 21, 27, 33],
+[21, 27, 33, 39],
+[4, 10, 16, 22],
+[10, 16, 22, 28],
+[16, 22, 28, 34],
+[22, 28, 34, 40],
+[5, 11, 17, 23],
+[11, 17, 23, 29],
+[17, 23, 29, 35],
+[23, 29, 35, 41]
 ]
 
 
@@ -177,7 +200,6 @@ const howToWin = [
 
 
 for (let i = 0; i < circle.length; i++){
-    
     circle[i].addEventListener('click',(e)=>{
         console.log(e.currentTarget)
         if (i<=5){
@@ -338,7 +360,7 @@ let restartGame = document.querySelector('.reset').addEventListener('click', ()=
     isGameOver= false
     const circle = document.querySelectorAll('.cirlce');
     for(let i=0; i< circle.length;i++){
-        circle[i].classList.add()
+        circle[i].classList.add('')
     }
     game()
 })
