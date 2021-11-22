@@ -1,3 +1,7 @@
+const game = () => {
+///////////////////
+
+
 const column = document.querySelectorAll('.circle')
 let currentPlayer= 'red'
 let isGameOver= false
@@ -48,9 +52,53 @@ const howToWin = [
 [36, 37, 38, 39],
 [37, 38, 39, 40],
 [38, 39, 40, 41],
-[0, 6, 12, 18]
-
-
+[0, 6, 12, 18],
+[6, 12, 18, 24],
+[12, 18, 24, 30],
+[18, 24, 30, 36],
+[1, 7, 13, 19],
+[7, 13, 19, 25],
+[13, 19, 25, 31],
+[19, 25, 31, 37],
+[2, 8, 14, 20],
+[8, 14, 20, 26],
+[14, 20, 26, 32],
+[20, 26, 32, 38],
+[3, 9, 15, 21],
+[9, 15, 21, 27],
+[15, 21, 27, 33],
+[21, 27, 33, 39],
+[4, 10, 16, 22],
+[10, 16, 22, 28],
+[16, 22, 28, 34],
+[22, 28, 34, 40],
+[5, 11, 17, 23,],
+[11, 17, 23, 29],
+[17, 23, 29, 35],
+[23, 29, 35, 41],
+[3, 8, 13, 18],
+[4, 9, 14, 19],
+[9, 14, 19, 24],
+[5, 10, 15, 20],
+[10, 20, 25, 30],
+[11, 16, 21, 26],
+[16, 21, 26, 31],
+[21, 26, 31, 26],
+[17, 22, 27, 32],
+[22, 27, 32, 37],
+[23, 28, 33, 38],
+[2, 9, 16, 23],
+[18, 25, 32, 39],
+[1, 8, 15, 22],
+[8, 15, 22, 29],
+[12, 19, 26, 33],
+[19, 26, 33, 40],
+[0, 7, 14, 21],
+[7, 14, 21, 28],
+[14, 21, 28, 35],
+[6, 13, 20, 27],
+[13, 20, 27, 34],
+[20, 27, 34, 41]
 ]
 
 
@@ -150,11 +198,13 @@ const howToWin = [
 
 
 for (let i = 0; i < column.length; i++){
+    
     column[i].addEventListener('click',(e)=>{
-        console.log(e.currentTarget)
+        //console.log(e.currentTarget)
+    
         if (currentPlayer === 'red'){
         column[i].classList.add('red')
-        howToWin()
+        //howToWin()
         currentPlayer='yellow'
         }else {
             column[i].classList.add('yellow')
@@ -162,4 +212,14 @@ for (let i = 0; i < column.length; i++){
             currentPlayer = 'red'   
         }})
 }
-//https://img.itch.zone/aW1hZ2UvMTA5NjM5Lzc3MTc5NC5naWY=/original/XfcdXj.gif
+/////////////
+}
+game()
+let restartGame = document.querySelector('.reset').addEventListener('click', ()=>{
+    isGameOver= false
+    const circle = document.querySelectorAll('.cirlce');
+    for(let i=0; i< circle.length;i++){
+        circle[i].classList.add()
+    }
+    game()
+})
