@@ -102,29 +102,29 @@ const winningArray = [
 [17, 23, 29, 35],
 [23, 29, 35, 41]
 ]
-// const howToWin=() =>{
-//     for (let i = 0; i < winningArray.length; i++){
-//         let combo = winningArray[i]
-//         if(
-//             circle[combo[0]].classList.contains(currentPlayer) &&
-//             circle[combo[1]].classList.contains(currentPlayer) &&
-//             circle[combo[2]].classList.contains(currentPlayer) &&
-//             circle[combo[3]].classList.contains(currentPlayer) 
-//         ){
-//             isGameOver=true
-//             //return alert('you won')
-//             let modal = document.createElement('div')
-//             modal.className='modal'
-//             modal.textContent= 'You Won!'
-//             modal.addEventListener('click',() =>{
-//                 modal.remove()
-//             }
-//             )
-//             document.body.appendChild(modal)
-//             return
-//         }
-//     }
-// }
+const howToWin=() =>{
+    for (let i = 0; i < winningArray.length; i++){
+        let combo = winningArray[i]
+        if(
+            circle[combo[0]].classList.contains(currentPlayer) &&
+            circle[combo[1]].classList.contains(currentPlayer) &&
+            circle[combo[2]].classList.contains(currentPlayer) &&
+            circle[combo[3]].classList.contains(currentPlayer) 
+        ){
+            isGameOver=true
+            //return alert('you won')
+            let modal = document.createElement('div')
+            modal.className='modal'
+            modal.textContent= 'You Won!'
+            modal.addEventListener('click',() =>{
+                modal.remove()
+            }
+            )
+            document.body.appendChild(modal)
+            return
+        }
+    }
+}
 
 
 
