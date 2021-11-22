@@ -24,11 +24,42 @@ let isGameOver= false
 //         }
 //     })
 // }
-    const howToWin = () =>{
-        if  (column[0].classList.add('red') === currentPlayer && column[1].classList.add('red') === currentPlayer && column[2].classList.add('red') === currentPlayer && column[3].classList.add('red') === currentPlayer){
-        alert(currentPlayer + ' wins')
+
+//found here: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#creating_a_two-dimensional_array
+const howToWin = [
+[0, 1, 2, 3],
+[1, 2, 3, 4],
+[2, 3, 4, 5],
+[6, 7, 8, 9,],
+[7, 8, 9, 10],
+[8, 9, 10, 11],
+[12, 13, 14, 15],
+[13, 14, 15, 16],
+[14, 15, 16, 17],
+[18, 19, 20 ,21],
+[19, 20 ,21, 22],
+[20, 21, 22, 23],
+[24, 25, 26, 27],
+[25, 26, 27, 28],
+[26, 27, 28, 29],
+[30, 31, 32, 33],
+[31, 32, 33, 34],
+[32, 33, 34, 35],
+[36, 37, 38, 39],
+[37, 38, 39, 40],
+[38, 39, 40, 41],
+
+
+]
+
+
+
+
+    // const howToWin = () =>{
+    //     if  (column[0].currentTarget === currentPlayer && column[1].currentTarget === currentPlayer && column[2].currentTarget === currentPlayer && column[3].currentTarget === currentPlayer){
+    //     alert(currentPlayer + ' wins')
         //isGameOver=true
-        }
+       // }
         // else if  (column[1] === currentPlayer && column[2] === currentPlayer && column[3] === currentPlayer && column[4] === currentPlayer){
         //     alert(currentPlayer + ' wins')
         //     isGameOver=true
@@ -112,13 +143,12 @@ let isGameOver= false
 
         
         
-    }  
+   // }  
 
 
 
 
 for (let i = 0; i < column.length; i++){
-    
     column[i].addEventListener('click',(e)=>{
         console.log(e.currentTarget)
         if (currentPlayer === 'red'){
