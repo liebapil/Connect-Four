@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Press+Start+2P&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 
 .html1{
     background-color: #C0C0C0;
@@ -117,6 +118,12 @@ h6{
 }
 button{
 margin-left: 900px;
+height: 80px;
+width: 100px;
+background-color: lightcoral;
+color: white;
+border-radius: 40px;
+font-family: 'Monoton', cursive ;
     
 }
 h4{
