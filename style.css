@@ -60,6 +60,7 @@ p{
     flex-direction: row;
     justify-content:space-evenly; 
     border-radius: 5px;  
+    margin-left: 150px;
 }
 
 .column1{
