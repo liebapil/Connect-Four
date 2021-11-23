@@ -112,7 +112,6 @@ const howToWin=() =>{
             circle[combo[3]].classList.contains(currentPlayer) 
         ){
             isGameOver=true
-            //return alert('you won')
             let modal = document.createElement('div')
             modal.className='modal'
             modal.textContent= 'You Won!'
