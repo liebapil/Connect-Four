@@ -10,6 +10,7 @@
  * ##### Open the game by typing in the terminal 'open index.html'
 #### **Start Playing!**
 ### **Good Luck!**
+[game web site](https://connect_four.surge.sh/)
 ***
 ##### Credits:
 [connect-four image](https://en.wikipedia.org/wiki/Connect_Four#/media/File:Connect_4_Board_and_Box.jpg)
